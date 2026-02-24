@@ -3,6 +3,7 @@
 El coordinador corrige la nota del estudiante 2 (índice 1) de 2.5 a 3.0.
 Muestra que el arreglo del profesor también refleja el cambio.
 Añade comentarios explicando el concepto de referencia en memoria. */
+
 public class Ejercicio9 {
     public static void main(String[] args) {
         double[] notasProfesor = {2.5, 2.5, 2.5, 2.5};

@@ -5,6 +5,7 @@ ultimoMensaje = "Hola"
 copiaTexto = ultimoMensaje
 Luego copiaTexto se cambia a "¿Cómo estás?"
 Muestra ambas variables y explica en un comentario por qué ultimoMensaje no cambió (inmutabilidad de String). */
+
 public class Ejercicio8 {
     public static void main(String[] args) {
 

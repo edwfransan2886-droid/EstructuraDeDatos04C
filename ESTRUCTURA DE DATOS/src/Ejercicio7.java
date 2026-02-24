@@ -17,8 +17,7 @@ public class Ejercicio7 {
             System.out.println("Producto " + (i + 1) + ": " + stockAlmacen[i]);
         }
 
-        // Simulamos una venta reduciendo el stock del producto 2
-        stockReportes[1] -= 5; // Vendemos 5 unidades del producto 2
+        stockReportes[1] -= 5; 
 
         System.out.println("\nDespués de la venta...");
 
