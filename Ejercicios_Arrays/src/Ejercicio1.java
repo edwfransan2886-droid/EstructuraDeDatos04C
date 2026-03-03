@@ -13,10 +13,9 @@ public class Ejercicio1 {
         if (posicion != -1) {
             System.out.println("Producto encontrado en la posición: " + posicion);
         } else {
-            System.out.println("Producto no encontrado en la estantería.");
+            System.out.println("Producto no encontrado");
         }
     }
-
     public static int busquedaLineal(int[] arr, int valor) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == valor) {
