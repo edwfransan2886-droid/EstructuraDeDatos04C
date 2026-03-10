@@ -21,14 +21,14 @@ public class Ejercicio_5 {
         int[] copiaInsercion = numeros.clone();
         int intercambiosSeleccion = selectionSort(copiaSeleccion);
         int movimientosInsercion = insertionSort(copiaInsercion);
-        System.out.println("Intercambios en Selección: " + intercambiosSeleccion);
-        System.out.println("Movimientos en Inserción: " + movimientosInsercion);
+        System.out.println("Intercambios en Seleccion: " + intercambiosSeleccion);
+        System.out.println("Movimientos en Insercion: " + movimientosInsercion);
         if (intercambiosSeleccion < movimientosInsercion) {
-            System.out.println("Selección fue más eficiente.");
+            System.out.println("Selección fue mas eficiente.");
         } else if (movimientosInsercion < intercambiosSeleccion) {
-            System.out.println("Inserción fue más eficiente.");
+            System.out.println("Insercion fue mas eficiente.");
         } else {
-            System.out.println("Ambos métodos fueron igual de eficientes.");
+            System.out.println("Ambos metodos fueron igual de eficientes.");
         }
         scanner.close();
     }
