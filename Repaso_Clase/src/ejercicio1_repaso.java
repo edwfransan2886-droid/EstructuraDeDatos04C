@@ -24,7 +24,7 @@ Ingrese el ID a buscar: 102
 >> PRODUCTO ENCONTRADO: Teclado - Precio: $45.0 - Stock: 12 */
 import java.util.Scanner;
 
-class producto {
+class Producto {
     int id;
     String nombre;
     double precio;
@@ -35,11 +35,11 @@ class producto {
 public class ejercicio1_repaso {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        producto [] productos = new producto[5];
+        Producto [] productos = new Producto[5];
 
         System.out.println("--- REGISTRO DE PRODUCTOS ---");
         for (int i = 0; i < productos.length; i++) {
-            productos[i] = new producto();
+            productos[i] = new Producto();
             System.out.println("Producto " + (i + 1));
             System.out.print("ID: ");
             productos[i].id = sc.nextInt();
@@ -53,7 +53,7 @@ public class ejercicio1_repaso {
         }
         for (int gap=productos.length/2; gap>0; gap/=2) {
             for (int i=gap; i<productos.length; i++) {
-                producto temp = productos[i];
+                Producto temp = productos[i];
                 int j;
                 for (j=i; j>=gap && productos[j-gap].precio > temp.precio; j-=gap) {
                     productos[j] = productos[j-gap];
@@ -62,7 +62,7 @@ public class ejercicio1_repaso {
             }
         }
         System.out.println("\n--- PRODUCTOS ORDENADOS POR ID ---");
-        for (producto p : productos) {
+        for (Producto p : productos) {
             System.out.println("ID: " + p.id + ", Nombre: " + p.nombre +
              ", Precio: " + p.precio + ", Stock: " + p.stock);
         }
@@ -70,7 +70,7 @@ public class ejercicio1_repaso {
         System.out.print("Ingrese el ID del producto a buscar: ");
         int idBusqueda = sc.nextInt();
         boolean encontrado = false;
-        for (producto p : productos) {
+        for (Producto p : productos) {
             if (p.id == idBusqueda) {
                 System.out.println("Producto encontrado: ID: " + p.id + ", Nombre: " + p.nombre +
                  ", Precio: " + p.precio + ", Stock: " + p.stock);
