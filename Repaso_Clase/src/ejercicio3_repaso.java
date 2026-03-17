@@ -15,6 +15,7 @@ La nota más ALTA del grupo es: 4.8
 La nota más BAJA del grupo es: 2.0
 --- LISTA DE NOTAS ORDENADA (Menor a Mayor) ---
 [2.0, 3.0, 3.5, 4.2, 4.8] */
+/*pide */
 
 import java.util.Scanner;
 
@@ -62,3 +63,4 @@ public class ejercicio3_repaso {
         System.out.println("]");
     }
 }
+
