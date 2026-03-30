@@ -75,7 +75,7 @@ public class Ejercicio2 {
         for (Libro l : libros) {
             System.out.println(l.codigo + " - " + l.titulo + " - " + l.paginas + " paginas");
         }
-        System.out.print("\nIngrese codigo a buscar: ");
+        System.out.print("\nIngrese codigo que busca: ");
         int codigoBuscar = sc.nextInt();
 
         int pos = busqueda(libros, codigoBuscar);
@@ -86,7 +86,7 @@ public class Ejercicio2 {
         }
         Libro menor = MenosPaginas(libros);
         System.out.println("\nLibro con menos paginas:");
-        System.out.println(menor.titulo + " (" + menor.paginas + " paginas)");
+        System.out.println(menor.titulo + " " + menor.paginas + " paginas");
         sc.close();
     }
 } 
