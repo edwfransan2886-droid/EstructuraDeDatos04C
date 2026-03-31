@@ -27,7 +27,7 @@ public class TorreControl {
         if (cabeza == null) return;
 
         if (cabeza.numeroVuelo.equals(numeroVuelo)) {
-            System.out.println("El vuelo ya está en prioridad.");
+            System.out.println("El vuelo ya esta en prioridad.");
             return;
         }
 

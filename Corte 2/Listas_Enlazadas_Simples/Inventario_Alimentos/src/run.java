@@ -18,13 +18,10 @@ public class run {
                 case 1:
                     System.out.print("Nombre del producto: ");
                     String nombre = sc.nextLine();
-
                     System.out.print("Cantidad: ");
                     int cantidad = sc.nextInt();
-
                     System.out.print("Dias para vencer: ");
                     int dias = sc.nextInt();
-
                     inventario.insertarProducto(nombre, cantidad, dias);
                     break;
 
@@ -39,9 +36,9 @@ public class run {
                 case 4:
                     System.out.println("Saliendo");
                     break;
-
+                    
                 default:
-                    System.out.println("Opcion inválida");
+                    System.out.println("Opcion invalida");
             }
 
         } while (opcion != 4);

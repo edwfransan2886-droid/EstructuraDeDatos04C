@@ -5,7 +5,6 @@ public class Torre {
 
         Scanner sc = new Scanner(System.in);
         TorreControl torre = new TorreControl();
-
         int opcion;
 
         do {
@@ -21,15 +20,12 @@ public class Torre {
             switch (opcion) {
 
                 case 1:
-                    System.out.print("Número de vuelo: ");
+                    System.out.print("Numero de vuelo: ");
                     String numero = sc.nextLine();
-
-                    System.out.print("Aerolínea: ");
+                    System.out.print("Aerolinea: ");
                     String aerolinea = sc.nextLine();
-
                     System.out.print("Combustible restante: ");
                     int combustible = sc.nextInt();
-
                     System.out.print("Cantidad de pasajeros: ");
                     int pasajeros = sc.nextInt();
                     sc.nextLine();
@@ -38,7 +34,7 @@ public class Torre {
                     break;
 
                 case 2:
-                    System.out.print("Número de vuelo en emergencia: ");
+                    System.out.print("Numero de vuelo en emergencia: ");
                     String emergencia = sc.nextLine();
                     torre.reportarEmergencia(emergencia);
                     break;
@@ -49,11 +45,11 @@ public class Torre {
                     break;
 
                 case 0:
-                    System.out.println("Saliendo...");
+                    System.out.println("Saliendo");
                     break;
 
                 default:
-                    System.out.println("Opción inválida");
+                    System.out.println("Opcion invalida");
             }
 
         } while (opcion != 0);

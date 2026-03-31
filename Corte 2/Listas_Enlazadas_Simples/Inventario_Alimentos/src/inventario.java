@@ -7,7 +7,7 @@ public class Inventario {
 
     public void insertarProducto(String nombre, int cantidad, int diasParaVencer) {
         Producto nuevo = new Producto(nombre, cantidad, diasParaVencer);
-
+        
         if (diasParaVencer < 3) {
             nuevo.siguiente = cabeza;
             cabeza = nuevo;
@@ -23,13 +23,12 @@ public class Inventario {
             }
         }
     }
-
     public void mostrarInventario() {
         Producto actual = cabeza;
         while (actual != null) {
             System.out.println("Nombre: " + actual.nombre +
                                " | Cantidad: " + actual.cantidad +
-                               " | Días para vencer: " + actual.diasParaVencer);
+                               " | Dias para vencer: " + actual.diasParaVencer);
             actual = actual.siguiente;
         }
     }
