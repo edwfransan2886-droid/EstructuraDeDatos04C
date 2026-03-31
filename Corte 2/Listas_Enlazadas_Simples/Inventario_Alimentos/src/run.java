@@ -1,18 +1,18 @@
 public class run {
     public static void main(String[] args) {
 
-        inventario inventario = new inventario();
+        inventario inv = new inventario();
 
-        inventario.agregarProducto("Leche", 10, 2);   
-        inventario.agregarProducto("Queso", 5, 7);    
-        inventario.agregarProducto("Yogurt", 8, 1);   
-        inventario.agregarProducto("Mantequilla", 4, 6); 
-        inventario.agregarProducto("Crema", 6, 3);    
+        inv.agregarProducto("Leche", 10, 2);
+        inv.agregarProducto("Queso", 5, 7);
+        inv.agregarProducto("Yogurt", 8, 1);
+        inv.agregarProducto("Mantequilla", 4, 4);
+        inv.agregarProducto("Crema", 6, 3);
 
-        System.out.println("=== INVENTARIO COMPLETO ===");
-        inventario.mostrarInventario();
+        System.out.println("=== INVENTARIO ===");
+        inv.mostrarInventario();
 
-        System.out.println("\n=== FILTRADO ===");
-        inventario.mostrarProductosPorVencer();
+        System.out.println("\n=== POR VENCER ===");
+        inv.mostrarProductosPorVencer();
     }
 }

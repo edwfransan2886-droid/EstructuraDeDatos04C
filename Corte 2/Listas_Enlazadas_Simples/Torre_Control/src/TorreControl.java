@@ -1,14 +1,28 @@
+class Vuelo {
+    String numeroVuelo;
+    String aerolinea;
+    int combustibleRestante;
+    int pasajeros;
+    Vuelo siguiente;
+
+    public Vuelo(String numeroVuelo, String aerolinea, int combustibleRestante, int pasajeros) {
+        this.numeroVuelo = numeroVuelo;
+        this.aerolinea = aerolinea;
+        this.combustibleRestante = combustibleRestante;
+        this.pasajeros = pasajeros;
+        this.siguiente = null;
+    }
+}
+
 public class TorreControl {
     Vuelo cabeza;
-
     public TorreControl() {
         cabeza = null;
     }
 
-    public void agregarVuelo(String numero, String aerolinea, int combustible, int pasajeros) {
-        Vuelo nuevo = new Vuelo(numero, aerolinea, combustible, pasajeros);
-
-        if (combustible < 10) {
+    public void agregarVuelo(String numeroVuelo, String aerolinea, int combustibleRestante, int pasajeros) {
+        Vuelo nuevo = new Vuelo(numeroVuelo, aerolinea, combustibleRestante, pasajeros);
+        if (combustibleRestante < 10) {
             nuevo.siguiente = cabeza;
             cabeza = nuevo;
         } else {
@@ -25,11 +39,12 @@ public class TorreControl {
     }
 
     public void reportarEmergencia(String numeroVuelo) {
-        if (cabeza == null) return;
-
-        // Si ya está en la cabeza
+        if (cabeza == null) {
+            System.out.println("La cola está vacia.");
+            return;
+        }
         if (cabeza.numeroVuelo.equals(numeroVuelo)) {
-            System.out.println("El vuelo ya está en prioridad.");
+            System.out.println("El vuelo ya esta al inicio.");
             return;
         }
 
@@ -40,32 +55,25 @@ public class TorreControl {
             anterior = actual;
             actual = actual.siguiente;
         }
-
-        // Si no se encontró
         if (actual == null) {
             System.out.println("Vuelo no encontrado.");
             return;
         }
 
-        // 🔥 Lo quitamos de su posición
         anterior.siguiente = actual.siguiente;
-
-        // 🔥 Lo movemos al inicio
         actual.siguiente = cabeza;
         cabeza = actual;
 
-        System.out.println("Vuelo " + numeroVuelo + " movido a prioridad.");
+        System.out.println("Vuelo " + numeroVuelo + " movido al inicio por emergencia.");
     }
 
-    // Mostrar cola
     public void mostrarCola() {
         Vuelo actual = cabeza;
-
         while (actual != null) {
             System.out.println("Vuelo: " + actual.numeroVuelo +
-                    " | Aerolínea: " + actual.aerolinea +
-                    " | Combustible: " + actual.combustibleRestante +
-                    " | Pasajeros: " + actual.pasajeros);
+                    "  -Aerolinea: " + actual.aerolinea +
+                    "  -Combustible: " + actual.combustibleRestante +
+                    "  -Pasajeros: " + actual.pasajeros);
             actual = actual.siguiente;
         }
     }
