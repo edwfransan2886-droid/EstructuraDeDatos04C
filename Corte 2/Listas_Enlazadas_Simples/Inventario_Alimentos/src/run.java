@@ -1,18 +1,51 @@
+import java.util.Scanner;
+
 public class run {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Inventario inventario = new Inventario();
+        int opcion;
+        do {
+            System.out.println("\n--- INVENTARIO DE LÁCTEOS ---");
+            System.out.println("1. Agregar producto");
+            System.out.println("2. Mostrar inventario");
+            System.out.println("3. Mostrar productos próximos a vencer (<5 días)");
+            System.out.println("4. Salir");
+            System.out.print("Seleccione una opcion: ");
+            opcion = sc.nextInt();
+            sc.nextLine(); 
+            switch (opcion) {
+                case 1:
+                    System.out.print("Nombre del producto: ");
+                    String nombre = sc.nextLine();
 
-        inventario inv = new inventario();
+                    System.out.print("Cantidad: ");
+                    int cantidad = sc.nextInt();
 
-        inv.agregarProducto("Leche", 10, 2);
-        inv.agregarProducto("Queso", 5, 7);
-        inv.agregarProducto("Yogurt", 8, 1);
-        inv.agregarProducto("Mantequilla", 4, 4);
-        inv.agregarProducto("Crema", 6, 3);
+                    System.out.print("Dias para vencer: ");
+                    int dias = sc.nextInt();
 
-        System.out.println("=== INVENTARIO ===");
-        inv.mostrarInventario();
+                    inventario.insertarProducto(nombre, cantidad, dias);
+                    break;
 
-        System.out.println("\n=== POR VENCER ===");
-        inv.mostrarProductosPorVencer();
+                case 2:
+                    inventario.mostrarInventario();
+                    break;
+
+                case 3:
+                    inventario.productosProximosAVencer();
+                    break;
+
+                case 4:
+                    System.out.println("Saliendo");
+                    break;
+
+                default:
+                    System.out.println("Opcion inválida");
+            }
+
+        } while (opcion != 4);
+
+        sc.close();
     }
 }

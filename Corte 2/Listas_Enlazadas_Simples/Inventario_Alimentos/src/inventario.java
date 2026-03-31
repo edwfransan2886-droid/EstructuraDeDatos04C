@@ -1,25 +1,11 @@
-class Producto {
-    String nombre;
-    int cantidad;
-    int diasParaVencer;
-    Producto siguiente;
-
-    public Producto(String nombre, int cantidad, int diasParaVencer) {
-        this.nombre = nombre;
-        this.cantidad = cantidad;
-        this.diasParaVencer = diasParaVencer;
-        this.siguiente = null;
-    }
-}
-
-public class inventario {
+public class Inventario {
     Producto cabeza;
 
-    public inventario() {
+    public Inventario() {
         cabeza = null;
     }
 
-    public void agregarProducto(String nombre, int cantidad, int diasParaVencer) {
+    public void insertarProducto(String nombre, int cantidad, int diasParaVencer) {
         Producto nuevo = new Producto(nombre, cantidad, diasParaVencer);
 
         if (diasParaVencer < 3) {
@@ -37,25 +23,25 @@ public class inventario {
             }
         }
     }
+
     public void mostrarInventario() {
         Producto actual = cabeza;
-
         while (actual != null) {
             System.out.println("Nombre: " + actual.nombre +
-                    " | Cantidad: " + actual.cantidad +
-                    " | Dias: " + actual.diasParaVencer);
+                               " | Cantidad: " + actual.cantidad +
+                               " | Días para vencer: " + actual.diasParaVencer);
             actual = actual.siguiente;
         }
     }
-    public void mostrarProductosPorVencer() {
-        Producto actual = cabeza;
 
-        System.out.println("Productos con menos de 5 dias:\n");
+    public void productosProximosAVencer() {
+        Producto actual = cabeza;
+        System.out.println("\nProductos con menos de 5 días para vencer:");
         while (actual != null) {
             if (actual.diasParaVencer < 5) {
                 System.out.println("Nombre: " + actual.nombre +
-                        " | Cantidad: " + actual.cantidad +
-                        " | Dias: " + actual.diasParaVencer);
+                                   " | Cantidad: " + actual.cantidad +
+                                   " | Dias para vencer: " + actual.diasParaVencer);
             }
             actual = actual.siguiente;
         }
