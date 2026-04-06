@@ -21,7 +21,7 @@ public class Spotify {
             switch (opcion) {
                 case 1:
                 case 2:
-                    System.out.print("Título: ");
+                    System.out.print("Titulo: ");
                     String titulo = sc.nextLine();
                     System.out.print("Artista: ");
                     String artista = sc.nextLine();
