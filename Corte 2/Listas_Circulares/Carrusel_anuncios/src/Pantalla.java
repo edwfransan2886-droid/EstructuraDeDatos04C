@@ -21,7 +21,7 @@ public class Pantalla {
 
     public void mostrarAnuncios() {
         if (cabeza == null) {
-            System.out.println("No hay anuncios.");
+            System.out.println("No hay anuncios");
             return;
         }
 
@@ -34,12 +34,11 @@ public class Pantalla {
 
     public void reproducir(int ciclos) {
         if (cabeza == null) {
-            System.out.println("No hay anuncios.");
+            System.out.println("No hay anuncios");
             return;
         }
 
         int tiempoTotal = 0;
-        Anuncio actual = cabeza;
         Anuncio masRepetido = cabeza;
 
         for (int i = 0; i < ciclos; i++) {
