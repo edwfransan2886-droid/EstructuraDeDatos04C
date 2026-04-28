@@ -55,7 +55,7 @@ public class App {
                     break;
 
                 case 5:
-                    System.out.println("Eliminando foto actual");
+                    System.out.println("Eliminar foto actual");
                     galeria.eliminarActual();
                     break;
 
@@ -68,7 +68,7 @@ public class App {
                     break;
 
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println("Opcion invalida");
             }
 
         } while (opcion != 0);

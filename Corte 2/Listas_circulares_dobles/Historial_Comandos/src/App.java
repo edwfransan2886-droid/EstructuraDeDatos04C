@@ -74,7 +74,7 @@ public class App {
                     break;
 
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println("Opcion invalida");
             }
 
         } while (opcion != 0);
