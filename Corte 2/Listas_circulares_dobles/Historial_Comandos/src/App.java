@@ -1,3 +1,10 @@
+/*2. Historial de Comandos de Terminal
+Los terminales guardan un historial de comandos. Al presionar flecha arriba el usuario retrocede al comando anterior; flecha abajo avanza al más reciente. El historial es circular: después del más antiguo vuelve al más nuevo.
+
+La Clase Comando (Nodo): Debe contener texto (String), exitoso (boolean — si ejecutó sin errores) y directorio (String — el path desde donde se ejecutó).
+El Problema: El historial mantiene un puntero cursor al comando que se está consultando. Navegar con "arriba" mueve el cursor al anterior (anterior); "abajo" lo mueve al siguiente (siguiente). El usuario puede eliminar el comando actual (para borrar contraseñas escritas por error), y el cursor pasa automáticamente al siguiente.
+Reto: Implementa los métodos arriba(), abajo(), mostrarCursor() y eliminarActual(). Simula: agrega 5 comandos, navega 3 veces hacia arriba, elimina el comando actual, navega una vez hacia abajo y muestra el historial completo con el cursor marcado. */
+
 import java.util.Scanner;
 
 public class App {
@@ -82,3 +89,5 @@ public class App {
         sc.close();
     }
 }
+
+/*gestiona un historial de navegacion con listas simples y debe hacer lo siguiente: 3 archivos se llaman: Pagina.java, Historial.java y app.java debes hacer un menu con switch el cual visitar pagina:agregar al final con url,titulo y visitas int; buscar por url: vusca una pagina y aumenta su contador de visitas;ver historial: listar todas las paginas y mostrar el historial de visitas del usuario ;pagina top:mostrar la pagina con el mayor numero de visitas y por ultimo la validacion que no permita urls vacias y el contador de visitas debes iniciar en 1 */
