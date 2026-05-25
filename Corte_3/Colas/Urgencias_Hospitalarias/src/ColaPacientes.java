@@ -55,7 +55,7 @@ public class ColaPacientes {
     public void imprimir() {
 
         if (isEmpty()) {
-            System.out.println("No hay pacientes en espera.");
+            System.out.println("No hay pacientes en espera");
             return;
         }
 
@@ -74,7 +74,7 @@ public class ColaPacientes {
     public void atenderTodos() {
 
         if (isEmpty()) {
-            System.out.println("No hay pacientes.");
+            System.out.println("No hay pacientes");
             return;
         }
 

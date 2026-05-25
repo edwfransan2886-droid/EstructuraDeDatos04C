@@ -9,13 +9,14 @@ public class App {
 
         do {
             System.out.println("\n==============================================");
-            System.out.println("   Urgencias Hospitalarias");
+            System.out.println("             Urgencias Hospitalarias");
             System.out.println("==============================================");
             System.out.println("1. Registrar paciente");
             System.out.println("2. Ver fila de pacientes");
             System.out.println("3. Atender paciente");
             System.out.println("4. Atender todos");
             System.out.println("0. Salir");
+            System.out.println();
             System.out.print("Elige una opcion: ");
 
             opcion = sc.nextInt();
@@ -42,7 +43,7 @@ public class App {
 
                     urgencias.enqueue(nuevo);
 
-                    System.out.println("Paciente registrado.");
+                    System.out.println("Paciente registrado");
                     break;
 
                 case 2:
@@ -56,7 +57,7 @@ public class App {
                         System.out.println("Paciente atendido:");
                         System.out.println(atendido);
                     } else {
-                        System.out.println("No hay pacientes.");
+                        System.out.println("No hay pacientes");
                     }
                     break;
 
@@ -65,11 +66,11 @@ public class App {
                     break;
 
                 case 0:
-                    System.out.println("Saliendo...");
+                    System.out.println("Saliendo");
                     break;
 
                 default:
-                    System.out.println("Opcion no valida.");
+                    System.out.println("Opcion no valida");
             }
 
         } while (opcion != 0);
