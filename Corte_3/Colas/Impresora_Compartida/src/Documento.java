@@ -17,7 +17,6 @@ public class Documento {
 
     @Override
     public String toString() {
-        return "[" + nombreArchivo + " | " + usuario + " | " +
-                numeroPaginas + " paginas | Color: " + esColor + "]";
+        return "[" + nombreArchivo + " | " + usuario + " | " + numeroPaginas + " paginas | Color: " + esColor + "]";
     }
 }

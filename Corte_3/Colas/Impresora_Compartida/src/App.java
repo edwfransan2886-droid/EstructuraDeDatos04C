@@ -9,13 +9,14 @@ public class App {
 
         do {
             System.out.println("\n==============================================");
-            System.out.println("   Cola de Impresion");
+            System.out.println("             Cola de Impresion");
             System.out.println("==============================================");
             System.out.println("1. Agregar documento");
             System.out.println("2. Ver cola");
             System.out.println("3. Imprimir documento");
             System.out.println("4. Calcular paginas totales");
             System.out.println("0. Salir");
+            System.out.println();
             System.out.print("Elige una opcion: ");
 
             opcion = sc.nextInt();
@@ -43,7 +44,7 @@ public class App {
 
                     impresora.enqueue(nuevo);
 
-                    System.out.println("Documento agregado a la cola.");
+                    System.out.println("Documento agregado a la cola");
                     break;
 
                 case 2:
@@ -57,7 +58,7 @@ public class App {
                         System.out.println("Documento impreso:");
                         System.out.println(impreso);
                     } else {
-                        System.out.println("No hay documentos.");
+                        System.out.println("No hay documentos");
                     }
                     break;
 
@@ -68,11 +69,11 @@ public class App {
                     break;
 
                 case 0:
-                    System.out.println("Saliendo...");
+                    System.out.println("Saliendo");
                     break;
 
                 default:
-                    System.out.println("Opcion no valida.");
+                    System.out.println("Opcion no valida");
             }
 
         } while (opcion != 0);
