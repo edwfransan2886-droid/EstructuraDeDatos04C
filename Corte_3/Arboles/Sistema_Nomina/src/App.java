@@ -12,7 +12,7 @@ public class App {
 
         ArbolEmpleados arbol = new ArbolEmpleados();
         Scanner scanner = new Scanner(System.in);
-
+        
         // Datos de prueba
         arbol.insertar(1001, "Juan Perez", "Gerente", 5500000);
         arbol.insertar(1005, "Maria Gomez", "Analista", 3200000);
