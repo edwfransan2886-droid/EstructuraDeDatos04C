@@ -72,8 +72,6 @@ public class ArbolEmpleados {
         inOrden(raiz);
     }
 
-    // ALTURA
-
     private int altura(Empleado nodo) {
 
         if (nodo == null)

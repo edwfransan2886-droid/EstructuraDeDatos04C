@@ -10,8 +10,7 @@ public class ArbolJugadores {
         return raiz == null;
     }
 
-    private Jugador insertar(Jugador nodo, int elo, String nombreUsuario,
-                             String pais, int partidasJugadas) {
+    private Jugador insertar(Jugador nodo, int elo, String nombreUsuario,String pais, int partidasJugadas) {
 
         if (nodo == null)
             return new Jugador(elo, nombreUsuario, pais, partidasJugadas);
